@@ -40,6 +40,38 @@
         p { margin-bottom: 20px; font-size: 1.1rem; }
 
         footer { background: #2c3e50; color: #fff; text-align: center; padding: 30px; }
+
+
+        /* Mobile Responsive Fix */
+        @media (max-width: 768px) {
+            .header-small { 
+                height: 30vh; 
+                margin-top: 80px; 
+            }
+            .header-small h1 { font-size: 1.8rem; }
+            
+            nav { 
+                flex-direction: column; 
+                padding: 10px; 
+            }
+            
+            nav ul { 
+                margin-top: 10px; 
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center;
+                gap: 15px; 
+            }
+            
+            nav ul li { 
+                margin: 0; 
+                font-size: 0.9rem; 
+            }
+
+            .logo-container h2 {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
