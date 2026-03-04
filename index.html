@@ -2,17 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabitha Foundation | Choose Language</title>
     <style>
-        body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #2c3e50; color: white; text-align: center; font-family: sans-serif; }
-        .lang-box { background: white; padding: 40px; border-radius: 15px; color: #2c3e50; }
-        .btn { display: block; padding: 15px; margin: 10px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #f1c40f; color: #2c3e50; }
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            background: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0;
+        }
+
+        .lang-box { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            color: #2c3e50;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            
+            /* MOBILE FIXES START HERE */
+            width: 90%;          /* Makes the box wide on phones */
+            max-width: 400px;    /* Prevents it from being too big on laptops */
+            box-sizing: border-box; 
+        }
+
+        .btn { 
+            display: block; 
+            padding: 18px;       /* Larger "touch target" for thumbs */
+            margin: 15px 0;      /* Better spacing between buttons */
+            background: #0056b3; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+
+        .btn:hover { 
+            background: #f1c40f; 
+            color: #2c3e50; 
+            transform: translateY(-2px);
+        }
+
+        h2 { font-size: 1.4rem; margin-bottom: 5px; }
+        p { margin-bottom: 25px; color: #7f8c8d; }
     </style>
 </head>
 <body>
     <div class="lang-box">
-        <img src="logo.jpeg" alt="Logo" style="width: 150px;">
+        <img src="logo.jpeg" alt="Logo" style="width: 120px; margin-bottom: 20px; border-radius: 8px;">
         <h2>Muraho! / Welcome / Bienvenue</h2>
         <p>Choose your preferred language:</p>
         <a href="rw/index.html" class="btn">Kinyarwanda</a>
