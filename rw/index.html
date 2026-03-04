@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMURYANGO TABITA | Murakaza Neza</title>
+    <style>
+        /* Styles remain identical to EN/FR for professional consistency */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: #333; background-color: #f4f4f4; scroll-behavior: smooth; }
+        nav { background: #2c3e50; color: #fff; padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-around; align-items: center; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-container h2 { font-size: 1.1rem; text-transform: uppercase; color: #fff; }
+        .hero { height: 70vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1438032005730-c779502df39b?q=80&w=2071&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; margin-top: 60px; padding: 40px 20px; }
+        .hero-logo img { max-width: 250px; max-height: 220px; width: auto; height: auto; margin-bottom: 15px; border-radius: 10px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; text-transform: uppercase; }
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        section { padding: 80px 0; border-bottom: 1px solid #ddd; text-align: center; }
+        h2 { color: #2c3e50; margin-bottom: 20px; font-size: 2.8rem; text-transform: uppercase; }
+        .content-box { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 8px solid #2c3e50; }
+        .activities { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin-top: 30px; }
+        .activity-item { background: #fff; width: 320px; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .activity-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 30px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { flex-direction: column; padding: 0.5rem; }
+            nav ul { margin-top: 10px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+            nav ul li { margin: 0; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="../logo.jpeg" alt="Logo" style="height: 45px; width: auto; border-radius: 4px;">
+            <h2>TABITA FOUNDATION</h2>
+        </div>
+        <ul>
+            <li><a href="../rw/index.html" style="color: #f1c40f;">RW</a></li>
+            <li><a href="../en/index.html">EN</a></li>
+            <li><a href="../fr/index.html">FR</a></li>
+            <li style="color: #ccc;">|</li>
+            <li><a href="gospel.html">Ubutumwa</a></li> 
+            <li><a href="#vision">Icyerekezo</a></li>
+            <li><a href="#mission">Inshingano</a></li>
+            <li><a href="#contact">Twandikire</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-logo">
+            <img src="../logo.jpeg" alt="Logo">
+        </div>
+        <h1>TABITA FOUNDATION</h1>
+        <p>Kwogeza Ijambo, Kubaka Ubuzima, no Gukorera Umuryango.</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="vision">
+            <h2>Icyerekezo Cyacu</h2>
+            <div class="content-box">
+                <p> Kubaka umuryango mugari aho abirengagizwa n’abandi, cyane cyane abarwayi, abana n’abantu babana n’ubumuga, bahabwa agaciro, urukundo n’amahirwe angana, kugira ngo babashe kwibeshaho no kubaho ubuzima bufite icyizere n’icyubahiro.</p>
+            </div>
+        </section>
+
+        <section id="mission">
+            <h2>Inshingano Zacu</h2>
+            <div class="content-box">
+                <p>Guhindura ubuzima bw’abatishoboye binyuze mu kubaha ubufasha bw’ibanze, kububakira ubushobozi, no kubafasha kwiteza imbere kugira ngo bagire ubuzima bwigenga kandi bufite icyizere.</p>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2>Ibikorwa Byacu</h2>
+            <div class="activities">
+                <div class="activity-item">
+                    <img src="https://images.pexels.com/photos/2351722/pexels-photo-2351722.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gusenga">
+                    <h3>Gusenga ku Cyumweru</h3>
+                    <p>Gira ibihe bidasanzwe byo kuramya, gusenga, no kwiga ijambo ry'Imana buri Cyumweru mugitondo.</p>
+                </div>
+                <div class="activity-item">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&auto=format&fit=crop" alt="Urubyiruko">
+                    <h3>Urubyiruko</h3>
+                    <p>Gushyigikira urubyiruko ngo ruyobore kandi rukure mu mwuka binyuze mu busabane bwa buri cyumweru.</p>
+                </div>
+                <div class="activity-item">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&auto=format&fit=crop" alt="Gufasha">
+                    <h3>Gufasha Umuryango</h3>
+                    <p>Kugeza urukundo rw'umuryango hanze binyuze mu bikorwa by'ubugiraneza mu baturage bacu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Twandikire</h2>
+            <div style="text-align: center; font-size: 1.2rem;">
+                <p><strong>Aho duherereye:</strong> Kigali, Rwanda</p>
+                <p><strong>Imeri:</strong> info@tabithafoundation.org</p>
+                <p><strong>Telefoni:</strong> +250 788 000 000</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TABITA FOUNDATION. Uburenganzira bwose ni ubwacu.</p>
+    </footer>
+
+</body>
+</html>
