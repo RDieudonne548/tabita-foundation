@@ -91,6 +91,36 @@
     
     h2 { font-size: 2rem; }
 }
+
+
+
+
+
+   /* This applies to both the Worship and Youth sliders */
+.mySlides, .youthSlides {
+    display: none;      /* Hidden by default, JS will show them */
+    width: 100%;
+    height: 100%;       /* Ensures they fill the slider container */
+    object-fit: cover;  /* This is critical: it crops images to fit without stretching them */
+    border-radius: 8px;
+    animation: fade 1.5s; 
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 200px;      /* You can adjust this height to fit your baptism photos better */
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
     </style>
 </head>
 <body>
@@ -140,13 +170,23 @@
             <h2>Our Activities</h2>
             <div class="activities">
                 <div class="activity-item">
-                    <img src="https://images.pexels.com/photos/2351722/pexels-photo-2351722.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sunday Worship">
+                    <div class="slider-container">
+                         <img class="mySlides" src="../images/photo1.jpg" style="width:100%">
+                         <img class="mySlides" src="../images/photo2.jpeg" style="width:100%">
+                         <img class="mySlides" src="../images/photo3.jpeg" style="width:100%">
+                        <img class="mySlides" src="../images/photo4.jpeg" style="width:100%">
+                      </div>
                     <h3>Sunday Worship</h3>
                     <p>Experience a powerful time of praise, prayer, and biblical teaching every Sunday morning.</p>
                 </div>
 
                 <div class="activity-item">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&auto=format&fit=crop" alt="Youth Ministry">
+                     <div class="slider-container">
+                         <img class="youthSlides" src="../images/photo5.png" style="width:100%">
+                         <img class="youthSlides" src="../images/photo6.jpeg" style="width:100%">
+                         <img class="youthSlides" src="../images/photo7.png" style="width:100%">
+                         <img class="youthSlides" src="../images/photo8.jpeg" style="width:100%">
+                      </div>
                     <h3>Youth Ministry</h3>
                     <p>Empowering young people to lead and grow in their spiritual journey through weekly fellowship.</p>
                 </div>
@@ -173,6 +213,46 @@
     <footer>
         <p>&copy; 2026 TABITA FOUNDATION. All Rights Reserved.</p>
     </footer>
+
+
+
+     <script>
+// 1. Sunday Worship Slider Logic
+var worshipIndex = 0;
+function runWorshipSlider() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    worshipIndex++;
+    if (worshipIndex > slides.length) {worshipIndex = 1}    
+    if(slides.length > 0) {
+        slides[worshipIndex-1].style.display = "block";  
+    }
+    setTimeout(runWorshipSlider, 3000); // Sunday slides change every 3 seconds
+}
+
+// 2. Youth Ministry Slider Logic
+var youthIndex = 0;
+function runYouthSlider() {
+    var i;
+    var slides = document.getElementsByClassName("youthSlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    youthIndex++;
+    if (youthIndex > slides.length) {youthIndex = 1}    
+    if(slides.length > 0) {
+        slides[youthIndex-1].style.display = "block";  
+    }
+    setTimeout(runYouthSlider, 3500); // Youth slides change every 3.5 seconds
+}
+
+// Start both sliders independently
+runWorshipSlider();
+runYouthSlider();
+</script>
 
 </body>
 </html>
